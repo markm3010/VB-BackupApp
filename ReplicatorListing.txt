@@ -1,0 +1,45 @@
+##########################
+#    Issue: If you run the vbs with "cscript replicator.vbs"  and get an error like --> 
+#    
+#        THERE IS NO SCRIPT ENGINE FOR FILE EXTENSION “.VBS”
+
+#    Fix:
+#    1.  Run cmd as admin and type or paste this in, then restart the cmd shell and try again ->
+           regsvr32 %systemroot%\system32\vbscript.dll 
+#    2.  If that didn't work, change .vbs file association: 
+         - right click replicator.vbs file->properties --> if some other application is associated, fix it.
+#        - In properties, click the "change" button, select "Microsoft Windows Based Script Host"
+#    3.  You may also need to go to the program that was associated, and remove vb/vbs from the 
+#        association in its settings or preferences.  I had this problem with notepad++, had to 
+#        remove it to get it cscript to work.
+     4.  Restart the cmd prompt and run "cscript replicator.vbs" again.
+
+# backup laptop to brick
++ G:\backups75QJR22
+
+C:\Advantage Test Cases
+C:\ADV-TESTING-2
+C:\Users\mattmart\Documents\BackupApp
+C:\Users\mattmart\Documents\helper docs howto directions
+C:\Users\mattmart\Documents\mail\
+C:\Users\mattmart\Documents\support_files
+C:\Users\mattmart\Documents\Snagit
+C:\Users\mattmart\Documents\kana_permanent_clips
+# C:\DAILYSHARE
+# C:\Users\mattmart\downloads
+# C:\Users\mattmart\Favorites
+#
+#
+##########################
+# optional second backup 
+# uncomment and edit if you want to run a 2nd backup
+#
+# Backup to USB Thumb Drive 
+# + F:\work\BackupApp-backups75QJR22
+# C:\users\mattmart\Documents\mail
+# C:\ADV-TESTING-2
+# C:\Users\mattmart\Documents\support_files
+# G:\DataStorage-SingleCopy
+
+
+
